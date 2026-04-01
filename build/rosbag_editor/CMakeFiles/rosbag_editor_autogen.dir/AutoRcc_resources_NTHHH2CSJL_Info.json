@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/razer/catkin_ws_assistive/build/rosbag_editor/rosbag_editor_autogen",
+	"CMAKE_BINARY_DIR" : "/home/razer/catkin_ws_assistive/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/razer/catkin_ws_assistive/build/rosbag_editor",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/razer/catkin_ws_assistive/src/rosbag_editor",
+	"CMAKE_SOURCE_DIR" : "/home/razer/catkin_ws_assistive/src",
+	"INCLUDE_DIR" : "/home/razer/catkin_ws_assistive/build/rosbag_editor/rosbag_editor_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/razer/catkin_ws_assistive/src/rosbag_editor/desktop/rosbag_editor.png"
+	],
+	"LOCK_FILE" : "/home/razer/catkin_ws_assistive/build/rosbag_editor/CMakeFiles/rosbag_editor_autogen.dir/AutoRcc_resources_NTHHH2CSJL_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "NTHHH2CSJL",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/razer/catkin_ws_assistive/build/rosbag_editor/CMakeFiles/rosbag_editor_autogen.dir/AutoRcc_resources_NTHHH2CSJL_Used.txt",
+	"SOURCE" : "/home/razer/catkin_ws_assistive/src/rosbag_editor/desktop/resources.qrc",
+	"VERBOSITY" : 0
+}

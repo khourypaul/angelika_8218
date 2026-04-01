@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/devel
+
+Name: rokubi_kinova_adapter
+Description: Description of rokubi_kinova_adapter
+Version: 0.6.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: sensor_msgs std_msgs xacro

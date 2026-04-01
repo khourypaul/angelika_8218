@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Rosbag Editor (local)
+Comment=Filter ROS bag files
+Exec=/home/razer/catkin_ws_assistive/install/lib/rosbag_editor/rosbag_editor.bash
+Icon=/home/razer/.local/share/applications/rosbag_editor.png
+Type=Application
+Categories=ROS;Development;Engineering;
+StartupNotify=true

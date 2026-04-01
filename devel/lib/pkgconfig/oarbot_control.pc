@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/devel
+
+Name: oarbot_control
+Description: Description of oarbot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs tf2 tf2_ros geometry_msgs message_runtime

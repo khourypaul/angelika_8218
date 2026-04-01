@@ -1,0 +1,112 @@
+number_of_robots: 2
+# command_topics: 
+#   - "/spacenav/twist/repub"
+#   - "/spacenav/twist/repub2"
+#   - "/spacenav/twist/repub3"
+closed_loop_swarm_command_topic: "/desired_swarm_vel"
+
+open_loop_swarm_command_topic: "/just_swarm_vel"
+
+resize_scaling_factor: 0.05
+
+whole_robot_open_loop_command_topics:
+  - "/oarbot_silver/cmd_vel"
+  - "/oarbot_blue/cmd_vel"
+
+arm_only_open_loop_command_topics:
+  - "/oarbot_silver/cmd_vel_arm"
+  - "/oarbot_blue/cmd_vel_arm"
+
+base_only_open_loop_command_topics:
+  - "/d2/cmd_vel_base"
+  - "/d1/cmd_vel_base"
+
+arm_joint_angles_action_address:
+  - '/oarbot_silver/j2n6s300_left_driver/joints_action/joint_angles' # For oarbot silver, left
+  - '/oarbot_blue/j2n6s300_right_driver/joints_action/joint_angles' # For oarbot blue, right
+
+# DEFAULT JOINT ANGLES FOR BODY TRACKING
+arm_joint_angles_home:
+  - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, 248.59091187] # [116.91, 167.59, 288.52, 126.34, 241.57, 275.86] # deg # Left arm config, oarbot silver
+  - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 94.90909576] # [251.64, 190.34, 77.5, 234.34, 128.93, 70.16] # deg # Right arm config, oarbot blue
+
+# # for collaborative admittance control application
+  # - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, -22.59091187] # [116.91, 167.59, 288.52, 126.34, 241.57, 275.86] # deg # Left arm config, oarbot silver
+  # - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 4.90909576] # [251.64, 190.34, 77.5, 234.34, 128.93, 70.16] # deg # Right arm config, oarbot blue
+
+# # for DLO applications, last joints are rotated 90 degrees (left-silver decrease by 90, right-blue increased by 90)
+# arm_joint_angles_home:
+#   - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, 158.59091187]  # deg # Left arm config, oarbot silver
+#   - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 184.90909576]  # deg # Right arm config, oarbot blue
+
+# # for DLO applications, last joints are rotated 90 degrees (left-silver increased by 90, right-blue decreased by 90)
+# arm_joint_angles_home:
+#   - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, 338.59091187]  # deg # Left arm config, oarbot silver
+#   - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 4.90909576]  # deg # Right arm config, oarbot blue
+
+# # for DLO applications, last joints are rotated 60 degrees (left-silver increased by 60, right-blue decreased by 60)
+# arm_joint_angles_home:
+#   - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, 308.59091187]  # deg # Left arm config, oarbot silver
+#   - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 34.90909576]  # deg # Right arm config, oarbot blue
+
+# # for DLO applications, last joints are rotated 90 degrees (left-silver increased by 40, right-blue decreased by 40)
+# arm_joint_angles_home:
+#   - [120.99264526, 180.984375, 307.55514526, 132.20454407, 281.93182373, 288.59091187]  # deg # Left arm config, oarbot silver
+#   - [249.81617737, 175.453125, 59.50367737, 238.97727966, 84.47727203, 54.90909576]  # deg # Right arm config, oarbot blue
+
+arm_fingers_action_address:
+  - '/oarbot_silver/j2n6s300_left_driver/fingers_action/finger_positions' # For oarbot silver, left
+  - '/oarbot_blue/j2n6s300_right_driver/fingers_action/finger_positions' # For oarbot blue, right
+
+obstacle_avoidance_service_address:
+  - '/d2/toggle_collision_avoidance'
+  - '/d1/toggle_collision_avoidance'
+
+body_joint_following_service_address:
+  - '/oarbot_silver/toggle_body_joint_following'
+  - '/oarbot_blue/toggle_body_joint_following'
+
+admittance_service_address:
+  - '/oarbot_silver/toggle_admittance'
+  - '/oarbot_blue/toggle_admittance'
+
+reset_desired_body_pose_service_address: 
+  - "/oarbot_silver/reset_desired_body_pose"
+  - "/oarbot_blue/reset_desired_body_pose"
+
+swarm_following_service_address: 
+  - "/oarbot_silver/toggle_swarm_following"
+  - "/oarbot_blue/toggle_swarm_following"
+
+arm_fingers_max_turn: 
+  - 6800 # or 7300 # This value is mapped btw 0-100%
+  - 6800 # or 7300 # This value is mapped btw 0-100%
+
+arm_type_information:
+  - "Kinova-Left"
+  - "Kinova-Right"
+
+robot_node_names:
+  - ["/uwb_front_oarbot_silver","/uwb_back_oarbot_silver","/sensor_fusion_oarbot_silver","/oarbot_silver_ctrl"]
+  - ["/uwb_front_oarbot_blue","/uwb_back_oarbot_blue","/sensor_fusion_oarbot_blue","/oarbot_blue_ctrl"]
+
+robot_type_information:
+  - "OB_S"
+  - "OB_B"
+
+input_command_topic: 'deadman_switch_spacenav_twist'
+
+tf_changer_topic: "tf_changer"
+
+swarm_tf_frame: "swarm_frame"
+
+robot_tf_frames:
+  - "tf_robot_0"
+  - "tf_robot_1"
+
+real_robot_tf_frames:
+  - "oarbot_silver_fusion"
+  - "oarbot_blue_fusion"
+
+swarm_reset_swarm_frame_service_address: '/master_computer/reset_swarm_frame'
+swarm_start_trajectory_service_address: '/master_computer/start_simple_swarm_move'

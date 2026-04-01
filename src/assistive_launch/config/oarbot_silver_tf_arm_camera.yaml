@@ -1,0 +1,13 @@
+tf_end_effector_frame_id: 'j2n6s300_left_end_effector' # it should be same as "$(arg kinova_prefix)_end_effector"
+tf_root_camera_frame_id: 'j2n6s300_left_camera_base' 
+
+arm2camera_pose: 
+  orientation:
+    x: 0.5
+    y: -0.5
+    z: 0.5
+    w: 0.5
+  position: # in meters
+    x: 0.0
+    y: -0.1064
+    z: -0.10015

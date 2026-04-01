@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>   
+<group ns="nuc">
+    <machine name="nuc-18" address="192.168.1.90" env-loader="/home/nuc/catkin_ws_assistive/src/assistive_launch/scripts/env_nuc.sh" user="nuc" password="1234"  default="true"/>
+
+    <arg name="record_cameras" default="true" />
+
+    <node pkg="rosbag" type="record" name="rosbag_record_cam"
+        args="record -o /home/nuc/rosbag_records/ /nuc/rgb/image_raw/compressed"
+        if="$(arg record_cameras)" />
+
+
+    <!-- <node pkg="rosbag" type="record" name="rosbag_record_pose"
+        args="record -o /home/nuc/rosbag_records/ /nuc/Pose_d2_tf_base_link /nuc/Pose_d1_tf_base_link " /> -->
+
+</group>
+</launch>

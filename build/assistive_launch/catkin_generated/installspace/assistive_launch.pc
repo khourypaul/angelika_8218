@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/install
+
+Name: assistive_launch
+Description: Description of assistive_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

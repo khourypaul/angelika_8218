@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/devel
+
+Name: tf_broadcasters
+Description: Description of tf_broadcasters
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: assistive_msgs cv_bridge geometry_msgs roscpp rospy sensor_msgs tf2 tf2_ros visualization_msgs

@@ -1,0 +1,34 @@
+cmd_vel_topic_name: "e_stop_cmd_vel" # subscribed
+cmd_vel_world_topic_name: "e_stop_cmd_vel_world" # subscribed (for commands directly represented in the world frame)
+
+cmd_vel_arm_topic_name: "cmd_vel_arm" #"j2n6s300_right_driver/in/cartesian_velocity" # published
+cmd_vel_base_topic_name: "/d1/cmd_vel_base" # published
+
+debug_constraint_marker_topic_name: "constraint_marker"
+debug_constrained_r_topic_name: "constrained_r"
+
+joint_states_arm_topic_name: "j2n6s300_right_driver/out/joint_state"
+
+control_ball_center: [0.50, -0.25, 0.50] # wrt. kinova arm base
+# control_ball_center: [0.15, -0.05, 0.40] # wrt. kinova arm base (for DLO experiments)
+
+control_ball_radius: 0.18 # 0.7 #0.5 #0.25 # meters
+# control_ball_radius: 0.8 # meters (for DLO experiments)
+
+
+tf_world_frame_id: "map" # "world_floor"
+tf_mobile_base_frame_id: "d1_tf_base_link"
+tf_arm_base_frame_id: "root_right_arm" 
+tf_ee_frame_id: "j2n6s300_right_end_effector"
+
+arm_joints_tf_prefix: "j2n6s300_right_" # prefix that joint states of kinova arm has in fron of each joint name
+
+mobile_base2arm_base_xy: [0.16, 0.0] # planar translation amounb from oarbot base center to kinova arm base
+is_left_arm_config: false # For Left arm config 
+plate_bottom_min: 0.295 # Minimum z height of the plate bottom from floor
+plate_bottom_max: 0.76 # Max z height of the plate bottom from floor
+plate_bottom2arm_base: 0.0 # Z height from plate bottom to kinova arm base 
+
+pub_rate_arm: 100.0 # For kinova arm 100 Hz is needed
+pub_rate_base: 25.0 
+min_rate_cmd_vel: 25.0 # Minimum expected rate of input cmd

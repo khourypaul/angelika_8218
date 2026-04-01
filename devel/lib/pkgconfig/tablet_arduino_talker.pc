@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/devel
+
+Name: tablet_arduino_talker
+Description: Description of tablet_arduino_talker
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

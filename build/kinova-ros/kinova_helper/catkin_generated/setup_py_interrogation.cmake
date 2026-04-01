@@ -1,0 +1,7 @@
+set(kinova_helper_SETUP_PY_SETUP_MODULE "distutils.core")
+set(kinova_helper_SETUP_PY_VERSION "0.0.0")
+set(kinova_helper_SETUP_PY_SCRIPTS "")
+set(kinova_helper_SETUP_PY_PACKAGES "general_robotics_toolbox")
+set(kinova_helper_SETUP_PY_PACKAGE_DIRS "include/general_robotics_toolbox")
+set(kinova_helper_SETUP_PY_MODULES "")
+set(kinova_helper_SETUP_PY_MODULE_DIRS "")

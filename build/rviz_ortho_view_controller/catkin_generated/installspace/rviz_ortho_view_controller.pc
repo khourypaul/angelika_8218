@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/install
+
+Name: rviz_ortho_view_controller
+Description: Description of rviz_ortho_view_controller
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lrviz_ortho_view_controller
+Requires: pluginlib roscpp rviz

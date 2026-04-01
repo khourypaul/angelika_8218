@@ -1,0 +1,8 @@
+prefix=/home/razer/catkin_ws_assistive/install
+
+Name: vel_controller
+Description: Description of vel_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs geometry_msgs message_runtime assistive_msgs
