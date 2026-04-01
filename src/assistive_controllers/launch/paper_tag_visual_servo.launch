@@ -1,0 +1,24 @@
+<launch>
+    <!-- paper_tag_visual_servo.launch
+         ==============================
+         Starts the visual-servo controller that drives the OARBot Blue arm
+         toward an ArUco paper tag using poses from the paper surface pipeline.
+
+         Typical usage:
+           roslaunch tf_broadcasters paper_surface_pipeline.launch
+           roslaunch assistive_controllers paper_tag_visual_servo.launch
+
+         Then enable via:
+           rosservice call /toggle_visual_servo "data: true"
+    -->
+
+    <arg name="params_file"
+         default="$(find assistive_launch)/config/oarbot_blue_paper_tag_visual_servo.yaml"/>
+
+    <node name="paper_tag_visual_servo"
+          pkg="assistive_controllers"
+          type="paper_tag_visual_servo.py"
+          output="screen">
+        <rosparam command="load" file="$(arg params_file)" subst_value="true"/>
+    </node>
+</launch>
